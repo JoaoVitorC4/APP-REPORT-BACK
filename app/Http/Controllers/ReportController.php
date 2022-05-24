@@ -34,12 +34,11 @@ class ReportController extends Controller
      * @param  \App\Http\Requests\StoreReportRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreReportRequest $request)
+    public function store(Request $request)
     {
-        return $request;
         return Report::create([
-            'Description' => $request->description,
-            'Image' => $request->image,
+            'description' => $request->description,
+            'image' => $request->image,
         ]);
     }
 
@@ -49,7 +48,7 @@ class ReportController extends Controller
      * @param  \App\Models\Report  $report
      * @return \Illuminate\Http\Response
      */
-    public function show(Report $report)
+    public function show(Request $request, Report $report)
     {
         return $report;
     }
