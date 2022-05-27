@@ -22,4 +22,4 @@ Route::get('reports', ['App\Http\Controllers\ReportController', 'index']);
 
 Route::post('reports', ['App\Http\Controllers\ReportController', 'store']);
 
-Route::post('users', ['App\Http\Controllers\UserController', 'store']);
+Route::post('user', ['App\Http\Controllers\UserController', 'store']);
