@@ -61,7 +61,7 @@ class ReportController extends Controller
      */
     public function edit(Report $report)
     {
-        //
+
     }
 
     /**

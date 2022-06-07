@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
             $table->string('description');
-            $table->string('image')->nullable();
+            $table->longText('image')->nullable();
             $table->timestamps();
 
         });
