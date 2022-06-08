@@ -13,4 +13,7 @@ class Report extends Model
         'description',
         'image'
     ];
+
+
+    public $timestamps = false;
 }

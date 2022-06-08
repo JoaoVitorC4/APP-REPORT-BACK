@@ -36,10 +36,12 @@ class ReportController extends Controller
      */
     public function store(Request $request)
     {
-        return Report::create([
+        $report = Report::create([
             'description' => $request->description,
             'image' => $request->image,
         ]);
+
+        return $report;
     }
 
     /**

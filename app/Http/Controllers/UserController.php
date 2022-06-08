@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -89,5 +90,14 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function login(Request $request)
+    {
+        $user = DB::table('users')
+                    ->where('email', $request->email)
+                    ->where('password', $request->password)
+                    ->first();
+        return $user;
     }
 }
