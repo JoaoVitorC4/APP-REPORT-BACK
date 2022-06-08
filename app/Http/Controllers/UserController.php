@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\View\View as View;
 
 class UserController extends Controller
 {
@@ -55,7 +56,10 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = user::find($id);
+
+        return View::make('user.show')
+            ->with('user', $user);
     }
 
     /**

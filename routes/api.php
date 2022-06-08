@@ -24,4 +24,6 @@ Route::post('reports', ['App\Http\Controllers\ReportController', 'store']);
 
 Route::post('user', ['App\Http\Controllers\UserController', 'store']);
 
+Route::post('userdata', ['App\Http\Controllers\UserController', 'show']);
+
 Route::post('login', ['App\Http\Controllers\UserController', 'login']);
