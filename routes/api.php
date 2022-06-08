@@ -23,3 +23,5 @@ Route::get('reports', ['App\Http\Controllers\ReportController', 'index']);
 Route::post('reports', ['App\Http\Controllers\ReportController', 'store']);
 
 Route::post('user', ['App\Http\Controllers\UserController', 'store']);
+
+Route::post('login', ['App\Http\Controllers\UserController', 'login']);
